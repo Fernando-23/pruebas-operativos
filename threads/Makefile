@@ -1,7 +1,6 @@
 CC = gcc
 CFLAGS = -I ../utils -I ./cliente -I ./servidor
-CLIENTE_DIR = ./cliente
-SERVIDOR_DIR = ./servidor 
+ 
 
 .PHONY = clean all
 
@@ -24,6 +23,6 @@ servidor/servidor.o: servidor/servidor.c ../utils/utils.h
 
 clean:
 	rm -f  cliente/cliente.o servidor/servidor.o ../utils/utils.o
-	rm -f $(CLIENTE_DIR)/cliente $(SERVIDOR_DIR)/servidor
+	rm -f cliente/cliente servidor/servidor
 
 
