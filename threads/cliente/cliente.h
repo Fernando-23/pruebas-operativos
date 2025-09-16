@@ -1,0 +1,14 @@
+#ifndef CLIENTE_H_
+#define CLIENTE_H_
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <commons/string.h>
+#include <commons/collections/list.h>
+#include <pthread.h>
+#include "../../utils/utils.h"
+
+void EnviarString(char* mensajito,int socket_servidor);
+void* incrementarContador();
+
+#endif
