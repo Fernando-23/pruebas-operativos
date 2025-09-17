@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <commons/collections/list.h>
+#include <commons/string.h>
 #include <pthread.h>
 #include <sys/socket.h>
 #include <unistd.h>
@@ -15,7 +16,18 @@ typedef struct
     
 }ArgsEsperarCliente;
 
+typedef struct{
+    char* query;
+    int prioridad;
+    int quid;
+    int fd;
+}QCB;
 
-void RecibirString(Mensaje* mensajito_a_recibir,int socket_cliente);
-void* esperarClienteVoid(void*);
+
+
+void* gestionarQueryIndividual(void* args);
+void* atenderQuerys(void *args);
+void* atenderWorker(void *args);
+void *gestionarWorkerIndividual(void *args);
+
 #endif /*SERVIDOR_H_*/

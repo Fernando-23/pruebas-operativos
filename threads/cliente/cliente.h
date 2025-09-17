@@ -8,7 +8,8 @@
 #include <pthread.h>
 #include "../../utils/utils.h"
 
-void EnviarString(char* mensajito,int socket_servidor);
+void enviarString(char* mensajito,int socket_servidor);
 void* incrementarContador();
+Mensaje* crearMensajeRegistroQuery(char* ruta,int prioridad);
 
 #endif
