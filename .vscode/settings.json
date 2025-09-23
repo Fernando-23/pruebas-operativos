@@ -15,6 +15,7 @@
         "initializer_list": "c",
         "utility": "c",
         "numbers": "c",
-        "listas-pruebas2.h": "c"
+        "listas-pruebas2.h": "c",
+        "cliente.h": "c"
     }
 }
