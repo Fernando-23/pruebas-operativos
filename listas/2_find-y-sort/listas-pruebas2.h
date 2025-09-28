@@ -11,9 +11,11 @@ t_list* lista_prueba;
 typedef struct {
     char* mensaje;
     int prioridad;
+    bool esta_libre;
 }Pruebita;
 
 void mostrarPruebita(void* pruebita_void);
 bool ordenarPorPrioridad(void *,void*);
+bool buscarPruebitaPorId(void* args);
 
 #endif /*LISTAS_PRUEBAS2_H_*/

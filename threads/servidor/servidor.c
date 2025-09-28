@@ -15,6 +15,8 @@ void* gestionarQueryIndividual(void* args){
     string_array_destroy(mensajito_cortado);
 
     liberarMensajito(mensaje_a_recibir);
+    
+
 }
 
 
@@ -83,6 +85,7 @@ int main(int argc,char* argv[]){
     //int socket_worker = iniciarServidor("9001");
 
     pthread_t thread_adm_query; //que fumada. edit 16/9 no era tan fumada
+    
     //pthread_t thread_worker;
     lista_ready = list_create();
 
