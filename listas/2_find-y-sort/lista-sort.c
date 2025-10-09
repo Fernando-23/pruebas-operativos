@@ -45,7 +45,7 @@ int main(){
     elem_5->mensaje = "la llorona";
     elem_5->prioridad = 4;
     elem_5->esta_libre =false;
-    elem_6->mensaje = "el apestoso";
+    elem_6->mensaje = "el exorcista";
     elem_6->prioridad = 2;
     elem_6->esta_libre =true;
     elem_7->mensaje = "la insoportable";

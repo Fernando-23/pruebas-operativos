@@ -1,9 +1,9 @@
-## Pruebas para Sistemas Operativos
+## Repo de pruebas para Sistemas Operativos
 
 ```
 quien sabe usar markdown?
 ```
-Basicamente yo y mi amigo Liam estamos cursando operativos y para probar las commons junto con cosas de C que no conocemos, creamos este repo.
+Simplemente yo y mi compi Liam estamos cursando operativos en UTN FRBA y para probar las commons junto con cosas de C que no conocemos, creamos este repo.
 Si a alguien le sirve, bienvenido sea.
 
 

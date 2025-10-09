@@ -16,6 +16,7 @@
         "utility": "c",
         "numbers": "c",
         "listas-pruebas2.h": "c",
-        "cliente.h": "c"
+        "cliente.h": "c",
+        "bitarray-prueba.h": "c"
     }
 }
