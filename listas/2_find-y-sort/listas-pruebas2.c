@@ -1,10 +1,10 @@
-#include "listas-pruebas2.h"
+#include "listas-utils.h"
 
-t_list* lista_prueba = NULL;
+//t_list* lista_prueba = NULL;
 
-void mostrarPruebita(void* pruebita_void){
-    Corredor* pruebita = (Corredor *)pruebita_void;
-    printf("Pruebita - mensaje: %s, numero: %d \n",pruebita->nombre,pruebita->prioridad);
+void mostrarCorredor(void* corredor_void){
+    Corredor* corredor = (Corredor*)corredor_void;
+    printf("Corredor - mensaje: %s, prioridad: %d \n",corredor->nombre,corredor->prioridad);
 }
 
 int main(){
@@ -28,7 +28,7 @@ int main(){
     int i = 1;
 
     printf("Lista antes de sacar elementos\n");
-    list_iterate(lista_prueba, mostrarPruebita);
+    list_iterate(lista_prueba, mostrarCorredor);
 
     while(tam > 0){ //3 2 1
         Corredor* fifo_prueba = (Corredor *)(list_remove(lista_prueba, 0));
@@ -39,7 +39,7 @@ int main(){
         if(list_is_empty(lista_prueba)){
             printf("La lista esta vacia\n");
         }else{
-            list_iterate(lista_prueba, mostrarPruebita);
+            list_iterate(lista_prueba, mostrarCorredor);
         }
        
         free(fifo_prueba);

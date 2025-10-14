@@ -1,30 +1,4 @@
-#include "listas-pruebas2.h"
-
-t_list* lista_prueba = NULL;
-
-void mostrarCorredor(void* corredor_void){
-    Corredor* corredor = (Corredor*)corredor_void;
-    printf("Corredor - mensaje: %s, prioridad: %d \n",corredor->nombre,corredor->prioridad);
-}
-
-bool ordenarPorPrioridad(void *corredor_vigente_void,void* corredor_desafiante_void){
-    Corredor* corredor_vigente = (Corredor*)corredor_vigente_void;
-    Corredor* corredor_desafiante = (Corredor*)corredor_desafiante_void;
-    return corredor_vigente->prioridad <= corredor_desafiante->prioridad;
-}
-
-bool buscarCorredorPorId(void *args){
-    Corredor* corredor = (Corredor*)args;
-    return corredor->esta_libre;
-}
-
-void agregarOrdenarYMostrar(t_list* lista, Corredor* corredor){
-    list_add(lista, corredor);
-    list_sort(lista,ordenarPorPrioridad);
-    list_iterate(lista,mostrarCorredor);
-    printf("\n");
-    printf("\n");
-}
+#include "listas-utils.h"
 
 int main(){
 
@@ -71,8 +45,6 @@ int main(){
     elem_10->nombre = "clash royale";
     elem_10->prioridad = 1;
     elem_10->esta_libre = false;
-    lista_prueba = list_create();
-
 
     agregarOrdenarYMostrar(lista_prueba, elem_1);
     agregarOrdenarYMostrar(lista_prueba, elem_2);

@@ -1,6 +1,6 @@
-#include "listas-pruebas2.h"
+#include "listas-utils.h"
 
-t_list* lista_prueba = NULL;
+//t_list* lista_prueba = NULL;
 
 void mostrarCorredor(void* corredor_void){
     Corredor* corredor = (Corredor*)corredor_void;
@@ -10,7 +10,7 @@ void mostrarCorredor(void* corredor_void){
 bool ordenarPorPrioridad(void *corredor_vigente_void,void* corredor_desafiante_void){
     Corredor* corredor_vigente = (Corredor*)corredor_vigente_void;
     Corredor* corredor_desafiante = (Corredor*)corredor_desafiante_void;
-    return corredor_vigente->prioridad < corredor_desafiante->prioridad;
+    return corredor_vigente->prioridad <= corredor_desafiante->prioridad;
 }
 
 bool buscarCorredorPorId(void *args){

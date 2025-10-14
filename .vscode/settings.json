@@ -19,6 +19,9 @@
         "cliente.h": "c",
         "bitarray-prueba.h": "c",
         "math.h": "c",
-        "mman.h": "c"
+        "mman.h": "c",
+        "listas-utils.h": "c",
+        "temporeando.h": "c",
+        "temporal.h": "c"
     }
 }
