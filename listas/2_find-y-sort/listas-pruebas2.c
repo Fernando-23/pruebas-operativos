@@ -3,20 +3,20 @@
 t_list* lista_prueba = NULL;
 
 void mostrarPruebita(void* pruebita_void){
-    Pruebita* pruebita = (Pruebita *)pruebita_void;
-    printf("Pruebita - mensaje: %s, numero: %d \n",pruebita->mensaje,pruebita->prioridad);
+    Corredor* pruebita = (Corredor *)pruebita_void;
+    printf("Pruebita - mensaje: %s, numero: %d \n",pruebita->nombre,pruebita->prioridad);
 }
 
 int main(){
-    Pruebita* elem_1 = malloc(sizeof(Pruebita));
-    Pruebita* elem_2 = malloc(sizeof(Pruebita));
-    Pruebita* elem_3 = malloc(sizeof(Pruebita));
+    Corredor* elem_1 = malloc(sizeof(Corredor));
+    Corredor* elem_2 = malloc(sizeof(Corredor));
+    Corredor* elem_3 = malloc(sizeof(Corredor));
     
-    elem_1->mensaje = "mensaje 1";
+    elem_1->nombre = "mensaje 1";
     elem_1->prioridad = 1;
-    elem_2->mensaje = "mensaje 2";
+    elem_2->nombre = "mensaje 2";
     elem_2->prioridad = 2;
-    elem_3->mensaje = "mensaje 3";
+    elem_3->nombre = "mensaje 3";
     elem_3->prioridad = 3;
     lista_prueba = list_create();
 
@@ -31,9 +31,9 @@ int main(){
     list_iterate(lista_prueba, mostrarPruebita);
 
     while(tam > 0){ //3 2 1
-        Pruebita* fifo_prueba = (Pruebita *)(list_remove(lista_prueba, 0));
+        Corredor* fifo_prueba = (Corredor *)(list_remove(lista_prueba, 0));
         printf("Se sacó el elemento: %d.\n", i);
-        printf("PRUEBITA: MENSAJE: %s, PRIORIDAD: %d.\n", fifo_prueba->mensaje, fifo_prueba->prioridad);
+        printf("PRUEBITA: MENSAJE: %s, PRIORIDAD: %d.\n", fifo_prueba->nombre, fifo_prueba->prioridad);
         
         printf("Lista despues de sacar el elemento: %d. \n", i);
         if(list_is_empty(lista_prueba)){
