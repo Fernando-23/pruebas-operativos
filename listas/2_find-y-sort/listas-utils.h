@@ -13,14 +13,14 @@ typedef struct {
     int prioridad;
     bool esta_libre;
     bool cambio_estado;
-    int64_t inicio;
+    int tiempo;
 }Corredor;
 
 void mostrarCorredor(void* pruebita_void);
 bool ordenarPorPrioridad(void *,void*);
 bool buscarCorredorPorId(void* args);
 void agregarOrdenarYMostrar(t_list* lista, Corredor* corredor);
-Corredor* inicializarCorredor(char* nombre,int prioridad);
+Corredor* inicializarCorredor(char* nombre, int prioridad, int tiempo);
 Corredor* quitarPrimero(t_list* lista);
 Corredor* obtenerPrimero(t_list* lista);
 
