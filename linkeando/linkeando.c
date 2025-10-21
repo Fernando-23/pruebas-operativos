@@ -19,7 +19,6 @@ int main(void) {
         return 1;
     }
 
-    fprintf(fp, "This is the content of the original file.\n");
     fclose(fp);
 
     /*
