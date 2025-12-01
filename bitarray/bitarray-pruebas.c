@@ -28,8 +28,8 @@ int main(int argc,char* argv[]){
     for (int i = 0; i < cant_bloques; i++) {
         printf("valor del bit %d es %d\n",i, bitarray_test_bit(bitarray_prueba, i));
     }
-    
-    //printf("Seteando el 1er bit en true\n");
+    sleep(10);
+
     for (int i = 0; i < cant_bloques; i += 2) {
         bitarray_set_bit(bitarray_prueba,i);
         msync(bitmap_mmap, cant_bloques/8, MS_SYNC);

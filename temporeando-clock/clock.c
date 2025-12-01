@@ -6,11 +6,11 @@ int main() {
     struct timespec inicio, fin;
 
     // Descomentar lineas de clock_gettime para que funque
-   // clock_gettime(CLOCK_REALTIME, &inicio); //IntelliSense es bobo, gcc lo entiende.
+    clock_gettime(CLOCK_REALTIME, &inicio); //IntelliSense es bobo, gcc lo entiende.
 
     sleep(2);
 
-  //  clock_gettime(CLOCK_REALTIME, &fin); 
+    clock_gettime(CLOCK_REALTIME, &fin); 
 
 
 
